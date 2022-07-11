@@ -1,0 +1,127 @@
+.menu {
+  display: none;
+}
+
+.header {
+  height: 88px;
+  width: 100%;
+  background-color: white;
+  border-bottom: 1px solid #d9fff5;
+  padding: 24px 16px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  &__divider {
+    height: 32px;
+    width: 2px;
+    background-color: #EAEAEA;
+    border-radius: 1px;
+
+  }
+
+  &__button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 0;
+    background: #ff3e79 no-repeat center;
+  }
+
+  .call {
+    background-image: url('./assets/img/call.svg');
+    margin-left: auto;
+  }
+
+  .chat {
+    background-image: url('./assets/img/chat.svg');
+  }
+
+  .profile {
+    background-image: url('./assets/img/profile.svg');
+  }
+
+  .burger {
+    background-image: url('./assets/img/burger.svg');
+  }
+
+  .repair {
+    background-image: url('./assets/img/repair.svg');
+  }
+
+  .question {
+    background-image: url('./assets/img/search.svg');
+  }
+
+  .call, .chat, .profile, .left {
+    display: none;
+  }
+
+  .right {
+    margin-left: auto;
+  }
+
+}
+
+//=================================== Tablet ===================================//
+
+@media (min-width: 768px) {
+  .menu {
+    display: none;
+  }
+
+  .header {
+    gap: 20px;
+    padding: 24px;
+
+    .right{
+      margin-left: 0;
+    }
+
+    .call, .chat, .profile, .left {
+      display: block;
+    }
+
+  }
+}
+
+//=================================== Desktop ===================================//
+
+@media (min-width: 1440px) {
+
+  .menu{
+    display: block;
+
+    .exit{
+      display: none;
+    }
+  }
+
+  .header {
+    background-color: #F8F8F8;
+    border-bottom: 0;
+    padding-left: 30px;
+    padding-right: 35px;
+    padding-top: 42px;
+    gap: 0;
+
+    &__button {
+      margin-left: 9px;
+    }
+
+    &__description {
+      margin-left: auto;
+    }
+
+    .call, .chat, .profile, .left, .header__logo, .right, .burger {
+        display: none;
+    }
+
+    .repair {
+
+      margin-right: 32px;
+    }
+
+
+  }
+}
